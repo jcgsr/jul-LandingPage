@@ -1,0 +1,82 @@
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import {
+  FaBeer,
+  FaAmazon,
+  FaFacebookF,
+  FaGoogle,
+  FaInstagram,
+  FaXbox,
+} from "react-icons/fa";
+const Service = () => {
+  const services = [
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaBeer />,
+    },
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaAmazon />,
+    },
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaFacebookF />,
+    },
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaGoogle />,
+    },
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaInstagram />,
+    },
+    {
+      title: "Lorem Ipsum",
+      desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      icon: <FaXbox />,
+    },
+  ];
+
+  return (
+    <section className="section" id="service">
+      <Container>
+        <Row className="justify-content-center">
+          <Col lg={6} md={8}>
+            <div data-aos="flip-left" className="title text-center mb-5">
+              <h3 className="font-weight-normal text-dark">
+                <span className="text-warning">Serviços</span>
+              </h3>
+              <p className="text-muted">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book
+              </p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          {services.map((service, key) => (
+            <Col key={key} lg={4} md={6}>
+              <div data-aos="zoom-in">
+                <div className="mb-5">
+                  <i className={service.icon}>{service.icon}</i>
+                </div>
+                <h5 className="text-dark font-weight-normal pt-1 mb-4">
+                  {service.title}
+                </h5>
+                <p className="text-muted mb-4">{service.desc}</p>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default Service;
