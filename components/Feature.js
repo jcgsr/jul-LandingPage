@@ -4,8 +4,6 @@ import Lottie from "react-lottie";
 import animationData from "../public/lotties/36341-find-people.json";
 import animationData1 from "../public/lotties/103206-people.json";
 
-import { motion } from "framer-motion";
-
 const FeatureBox = (props) => {
   const defaultOptions = {
     loop: true,

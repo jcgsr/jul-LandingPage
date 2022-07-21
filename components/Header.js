@@ -10,6 +10,8 @@ import {
   NavLink,
 } from "reactstrap";
 
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -32,7 +34,9 @@ const Header = () => {
       <Navbar light expand="md">
         <Container>
           <NavbarBrand href="/">LOGO</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <NavbarToggler onClick={toggle}>
+            {!isOpen ? <AiOutlineMenu /> : <AiOutlineClose />}
+          </NavbarToggler>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem>
@@ -56,4 +60,3 @@ const Header = () => {
 };
 
 export default Header;
-
